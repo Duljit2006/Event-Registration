@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&amp;family=Roboto+Flex:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-background":"#1a1b1e","tertiary-fixed-dim":"#fbbc05","surface-container-lowest":"#ffffff","tertiary-fixed":"#ffdfa0","on-tertiary":"#ffffff","secondary":"#006e2c","on-primary":"#ffffff","on-secondary":"#ffffff","secondary-fixed":"#89fa9b","surface-variant":"#e3e2e6","surface-dim":"#dbd9dd","error":"#ba1a1a","on-surface-variant":"#424753","primary-fixed":"#d8e2ff","outline-variant":"#c2c6d5","on-primary-fixed":"#001a41","secondary-fixed-dim":"#6ddd81","tertiary":"#765700","on-tertiary-fixed":"#261a00","on-secondary-fixed":"#002108","on-primary-container":"#fefcff","primary-fixed-dim":"#adc6ff","outline":"#727785","on-secondary-container":"#00722f","surface-tint":"#005ac1","primary-container":"#2771df","on-tertiary-fixed-variant":"#5c4300","secondary-container":"#86f898","surface-container-high":"#e9e7eb","background":"#faf9fd","on-primary-fixed-variant":"#004494","surface-container":"#efedf1","on-secondary-fixed-variant":"#005320","on-error-container":"#93000a","surface-bright":"#faf9fd","primary":"#0058bd","on-tertiary-container":"#fffbff","surface":"#faf9fd","inverse-primary":"#adc6ff","error-container":"#ffdad6","tertiary-container":"#956e00","on-error":"#ffffff","inverse-on-surface":"#f1f0f4","on-surface":"#1a1b1e","surface-container-highest":"#e3e2e6","inverse-surface":"#2f3033","surface-container-low":"#f4f3f7"},borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},spacing:{"space-lg":"1.5rem","gutter-lg":"2rem",margin:"1.5rem","space-sm":"0.5rem","margin-lg":"5rem","space-md":"1rem","space-2xl":"3rem","margin-md":"3rem",gutter:"1.5rem","space-xl":"2rem","space-3xl":"4.5rem","space-xs":"0.25rem","gutter-sm":"1rem"},fontFamily:{"label-md":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-sm":["Roboto Flex"],"label-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Roboto Flex"],"title-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"body-lg":["Roboto Flex"]},fontSize:{"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"600"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"500"}],"headline-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"title-lg":["18px",{lineHeight:"26px",fontWeight:"600"}],"headline-md":["24px",{lineHeight:"32px",fontWeight:"600"}],"display-lg":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"700"}],"display-lg-mobile":["38px",{lineHeight:"46px",letterSpacing:"-0.01em",fontWeight:"700"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex items-center justify-center p-margin"><main class="w-full max-w-[1440px] mx-auto flex items-center justify-center"><div class="flex flex-col w-full relative min-h-[900px] overflow-hidden">
+<!-- Underlying Ticket Dashboard View (Dimmed Context) -->
+<div class="w-full flex flex-col gap-space-2xl filter blur-[1px] select-none pointer-events-none opacity-40 transition-all duration-300">
+<!-- Top Bar Mockup -->
+<div class="flex items-center justify-between pb-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">DevFest 2026 Registration Portal</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-lg text-label-lg text-on-surface-variant">Badge: #DF-99402</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface font-label-lg">
+          AK
+        </div>
+</div>
+</div>
+<!-- Active Ticket Overview Bento Cards -->
+<div class="grid grid-cols-12 gap-gutter-lg">
+<div class="col-span-8 bg-surface-container-lowest p-space-xl rounded-lg shadow-sm flex flex-col gap-space-lg">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md text-primary tracking-wide uppercase">All-Access Pass confirmed</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Google Developer Group DevFest 2026</h2>
+</div>
+<span class="px-space-md py-space-xs rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Active Order
+          </span>
+</div>
+<div class="grid grid-cols-3 gap-space-md py-space-md">
+<div class="bg-surface-container-low p-space-md rounded-DEFAULT flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Date &amp; Time</span>
+<span class="font-title-lg text-title-lg text-on-surface">Oct 24–26, 2026</span>
+<span class="font-body-sm text-body-sm text-outline">09:00 AM PST</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-DEFAULT flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Venue &amp; Track</span>
+<span class="font-title-lg text-title-lg text-on-surface">Grand Concourse Hall</span>
+<span class="font-body-sm text-body-sm text-outline">Keynote Stage + AI Pavilion</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-DEFAULT flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ticket Holder</span>
+<span class="font-title-lg text-title-lg text-on-surface">Alex Kowalski</span>
+<span class="font-body-sm text-body-sm text-outline">Staff Machine Learning Engineer</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md">
+<div class="flex items-center gap-space-md text-on-surface-variant font-body-md text-body-md">
+<span class="material-symbols-outlined text-primary">qr_code_2</span>
+<span>Digital Credential #7819-A9 ready for Google Wallet pass synchronization</span>
+</div>
+<button class="font-label-lg text-label-lg px-space-lg py-space-sm rounded-full bg-surface-container text-error" type="button">
+            Cancel Registration
+          </button>
+</div>
+</div>
+<div class="col-span-4 bg-surface-container-lowest p-space-xl rounded-lg shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<span class="font-title-lg text-title-lg text-on-surface">Workshops Selected</span>
+<div class="flex flex-col gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<div class="p-space-sm bg-surface-container-low rounded-DEFAULT flex justify-between items-center">
+<span>Deep Dive: On-device LLM fine-tuning</span>
+<span class="text-primary font-label-sm">Track A</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-DEFAULT flex justify-between items-center">
+<span>Modern Android: Compose Multiplatform</span>
+<span class="text-secondary font-label-sm">Track B</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Total Paid: $0.00 (Community Grant)</span>
+<span class="font-label-sm text-label-sm text-primary">View receipt</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Screen 4: Cancellation Confirmation Overlay Modal -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-margin bg-[#202124]/50 backdrop-blur-[2px] transition-opacity duration-200" id="cancellation-overlay">
+<!-- Pop-up Dialog Card -->
+<div aria-describedby="dialog-desc" aria-labelledby="dialog-title" aria-modal="true" class="w-full max-w-[420px] bg-surface-container-lowest rounded-lg p-space-xl shadow-2xl flex flex-col items-center text-center transform transition-transform duration-200 scale-100" role="alertdialog">
+<!-- Four-color DevFest indicator line -->
+<div class="flex items-center justify-center gap-space-xs mb-space-lg">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<!-- Icon: Warning circle with soft error tint container -->
+<div class="w-16 h-16 rounded-full bg-error-container flex items-center justify-center text-error mb-space-sm">
+<span class="material-symbols-outlined text-[32px] leading-none" style="font-variation-settings: 'FILL' 1;">
+          warning
+        </span>
+</div>
+<!-- Text Group -->
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-space-sm" id="dialog-title">
+        Cancel Registration?
+      </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed px-space-xs" id="dialog-desc">
+        This action cannot be undone. Your ticket for GDG DevFest 2026 will be permanently cancelled.
+      </p>
+<!-- Context Notification Badge -->
+<div class="w-full mt-space-md py-space-xs px-space-md bg-surface-container-low rounded-DEFAULT flex items-center justify-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">event_busy</span>
+<span class="font-label-sm text-label-sm">Session access &amp; workshops will be released</span>
+</div>
+<!-- Actions -->
+<div class="flex items-center justify-end gap-space-sm w-full mt-space-xl pt-space-xs">
+<button class="font-label-lg text-label-lg font-medium text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors px-space-lg py-space-sm rounded-full flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-outline" id="btn-go-back" type="button">
+          Go Back
+        </button>
+<button class="font-label-lg text-label-lg font-medium text-on-error bg-error hover:bg-error/90 active:scale-95 transition-all px-space-xl py-space-sm rounded-full shadow-sm flex items-center justify-center gap-space-xs focus:outline-none focus:ring-2 focus:ring-error" id="btn-confirm-cancel" type="button">
+<span>Yes, Cancel It</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+    (function() {
+      const overlay = document.getElementById('cancellation-overlay');
+      const goBackBtn = document.getElementById('btn-go-back');
+      const confirmCancelBtn = document.getElementById('btn-confirm-cancel');
+
+      if (goBackBtn && overlay) {
+        goBackBtn.addEventListener('click', function() {
+          overlay.classList.add('opacity-0', 'pointer-events-none');
+          setTimeout(function() {
+            overlay.style.display = 'none';
+          }, 200);
+        });
+      }
+
+      if (confirmCancelBtn && overlay) {
+        confirmCancelBtn.addEventListener('click', function() {
+          confirmCancelBtn.disabled = true;
+          confirmCancelBtn.innerHTML = `
+            <span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span>
+            <span>Cancelling...</span>
+          `;
+          setTimeout(function() {
+            confirmCancelBtn.innerHTML = `
+              <span class="material-symbols-outlined text-[18px]">check</span>
+              <span>Cancelled</span>
+            `;
+            setTimeout(function() {
+              overlay.classList.add('opacity-0', 'pointer-events-none');
+              setTimeout(function() {
+                overlay.style.display = 'none';
+              }, 200);
+            }, 600);
+          }, 900);
+        });
+      }
+    })();
+  </script>
+</div></main></body></html>
