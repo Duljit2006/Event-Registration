@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 import { TicketEmail } from "../../../../emails/ConfirmationEmail";
-
-const resend = new Resend(process.env.RESEND_API_KEY || "re_dummy_key_123");
 
 export async function POST(request: Request) {
   try {
@@ -15,13 +13,10 @@ export async function POST(request: Request) {
       );
     }
 
-    // In a real production app with a verified domain, the 'from' address would be:
-    // from: 'GDG DevFest <tickets@your-domain.com>'
-    // For Resend's free test tier without a domain, we MUST use onboarding@resend.dev
-    // and it will only successfully deliver to the email you signed up to Resend with!
-
-    if (!process.env.RESEND_API_KEY) {
-      console.log("Mocking email send since RESEND_API_KEY is not configured.");
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+      console.log(
+        "Mocking email send since EMAIL_USER or EMAIL_PASS is not configured.",
+      );
       console.log(`Sending ticket ${ticketId} to ${email}`);
       return NextResponse.json({ success: true, mocked: true });
     }
@@ -29,14 +24,22 @@ export async function POST(request: Request) {
     const { render } = await import("@react-email/components");
     const htmlString = await render(TicketEmail({ name, ticketId, role }));
 
-    const data = await resend.emails.send({
-      from: "GDG Registration <onboarding@resend.dev>",
-      to: "duljit29@gmail.com", // Hardcoded for Resend free tier testing
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
+    const info = await transporter.sendMail({
+      from: `"GDG DevFest 2026" <${process.env.EMAIL_USER}>`,
+      to: email,
       subject: "Your Ticket for GDG DevFest 2026",
       html: htmlString,
     });
 
-    return NextResponse.json({ success: true, data });
+    return NextResponse.json({ success: true, messageId: info.messageId });
   } catch (error) {
     console.error("Error sending email:", error);
     return NextResponse.json(
