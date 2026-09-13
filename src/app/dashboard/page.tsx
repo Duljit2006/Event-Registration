@@ -220,10 +220,10 @@ export default function DashboardPage() {
                           Attendee
                         </span>
                         <h2 className="font-title-lg text-title-lg text-on-surface font-bold truncate">
-                          John Doe
+                          {userData?.name || "Attendee"}
                         </h2>
                         <span className="font-body-md text-body-md text-on-surface-variant truncate">
-                          Full-Stack Developer
+                          {userData?.role || "Full-Stack Developer"}
                         </span>
                       </div>
                     </div>
